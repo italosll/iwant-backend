@@ -1,4 +1,5 @@
-﻿using iwant_backend.Domain.Products;
+﻿using Flunt.Notifications;
+using iwant_backend.Domain.Products;
 using Microsoft.EntityFrameworkCore;
 
 namespace iwant_backend.Infra.Data;
@@ -11,6 +12,7 @@ public class ApplicationDbContext : DbContext
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
     protected override void OnModelCreating(ModelBuilder builder)
     {
+        builder.Ignore<Notification>();
 
         builder.Entity<Product>().Property(p => p.Name).IsRequired();
         builder.Entity<Product>().Property(p => p.Description).HasMaxLength(255);

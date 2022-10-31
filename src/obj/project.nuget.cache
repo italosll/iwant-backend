@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iuZXEP045o0pHp2P/klyL83U2l4ePHvEPweNKcvG/QG1gEoHzYRIiPtxiH9aVXgge6V3tITEGxUVVPScAizWhg==",
+  "dgSpecHash": "W2ERtsUDOJOzVQZYBYeemX8zbLmJlWVwBsqPYf9xL+5pHLUkvstyyMLSRQng8oClsFFT4I8tO3HsG4v+G9F88Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\italo\\projects\\iwant-backend\\src\\iwant-backend.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\italo\\.nuget\\packages\\flunt\\2.0.5\\flunt.2.0.5.nupkg.sha512",
     "C:\\Users\\italo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\italo\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\italo\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
