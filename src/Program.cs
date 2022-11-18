@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Diagnostics;
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration["ConnectionString:IWantDb"]);
@@ -72,7 +74,18 @@ app.MapMethods(TokenPost.Template, TokenPost.Methods, TokenPost.Handle);
 
 
 
+app.UseExceptionHandler("/error");
+app.Map("/error", (HttpContext http) =>
+{
+    var error = http.Features?.Get<IExceptionHandlerFeature>()?.Error;
 
+    if (error != null)
+    {
+        if (error is SqlException)
+            return Results.Problem(title: "Database out", statusCode: 500);
+    }
+    return Results.Problem(title: "An error ocurred", statusCode: 500);
+});
 
 
 
