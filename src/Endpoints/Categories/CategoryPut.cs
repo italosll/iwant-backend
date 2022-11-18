@@ -1,10 +1,4 @@
-﻿using iwant_backend.Infra.Data;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
-
-namespace iwant_backend.Endpoints.Categories;
-
+﻿namespace iwant_backend.Endpoints.Categories;
 public class CategoryPut
 {
     public static string Template => "/categories/{id:guid}";

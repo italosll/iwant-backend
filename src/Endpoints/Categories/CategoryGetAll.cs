@@ -1,6 +1,4 @@
-﻿using iwant_backend.Infra.Data;
-
-namespace iwant_backend.Endpoints.Categories;
+﻿namespace iwant_backend.Endpoints.Categories;
 
 public class CategoryGetAll
 {

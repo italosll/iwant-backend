@@ -1,13 +1,3 @@
-using iwant_backend.Endpoints.Categories;
-using iwant_backend.Endpoints.Employees;
-using iwant_backend.Endpoints.Security;
-using iwant_backend.Infra.Data;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration["ConnectionString:IWantDb"]);

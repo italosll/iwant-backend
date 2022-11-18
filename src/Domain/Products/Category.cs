@@ -1,6 +1,4 @@
-﻿using Flunt.Validations;
-
-namespace iwant_backend.Domain.Products;
+﻿namespace iwant_backend.Domain.Products;
 
 public class Category : Entity
 {

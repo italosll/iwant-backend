@@ -7,6 +7,51 @@
     <RootNamespace>iwant_backend</RootNamespace>
   </PropertyGroup>
 
+	<ItemGroup>
+		<Using Include="Microsoft.Data.SqlClient"/>
+		<Using Include="Dapper"/>
+
+		<Using Include="Microsoft.AspNetCore.Authorization"/>
+		<Using Include="Microsoft.AspNetCore.Identity"/>
+		<Using Include="Microsoft.IdentityModel.Tokens"/>
+		<Using Include="System.IdentityModel.Tokens.Jwt"/>
+		<Using Include="System.Security.Claims"/>
+		<Using Include="System.Text"/>
+		<Using Include="Microsoft.Data.SqlClient"/>
+		<Using Include="Flunt.Validations"/>
+		<Using Include="Microsoft.AspNetCore.Authentication.JwtBearer"/>
+		<Using Include="Microsoft.AspNetCore.Mvc"/>
+		<Using Include="Flunt.Notifications"/>
+		<Using Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore"/>
+		<Using Include="Microsoft.EntityFrameworkCore"/>
+		<Using Include="iwant_backend.Domain.Products"/>
+		
+		
+		<Using Include="iwant_backend.Domain.Products"/>
+
+
+
+		<Using Include="iwant_backend.Endpoints.Employees"/>
+		<Using Include="iwant_backend.Endpoints.Categories"/>
+		<Using Include="iwant_backend.Endpoints.Security"/>
+		<Using Include="iwant_backend.Infra.Data"/>
+
+ 
+  
+
+
+
+
+
+
+
+
+
+
+
+
+	</ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Dapper" Version="2.0.123" />
     <PackageReference Include="Flunt" Version="2.0.5" />

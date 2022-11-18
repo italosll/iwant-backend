@@ -1,9 +1,4 @@
-﻿using iwant_backend.Domain.Products;
-using iwant_backend.Infra.Data;
-using Microsoft.AspNetCore.Authorization;
-using System.Security.Claims;
-
-namespace iwant_backend.Endpoints.Categories;
+﻿namespace iwant_backend.Endpoints.Categories;
 
 public class CategoryPost
 {

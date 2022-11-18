@@ -1,8 +1,4 @@
-﻿using Dapper;
-using iwant_backend.Endpoints.Employees;
-using Microsoft.Data.SqlClient;
-
-namespace iwant_backend.Infra.Data;
+﻿namespace iwant_backend.Infra.Data;
 
 public class QueryAllUsersWithClaimName
 {

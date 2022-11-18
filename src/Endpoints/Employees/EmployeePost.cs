@@ -1,8 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using System.Security.Claims;
-
-namespace iwant_backend.Endpoints.Employees;
+﻿namespace iwant_backend.Endpoints.Employees;
 
 public class EmployeePost
 {

@@ -1,7 +1,4 @@
-﻿using iwant_backend.Infra.Data;
-using Microsoft.AspNetCore.Authorization;
-
-namespace iwant_backend.Endpoints.Employees;
+﻿namespace iwant_backend.Endpoints.Employees;
 
 public class EmployeeGetAll
 {
