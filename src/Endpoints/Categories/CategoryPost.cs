@@ -1,5 +1,7 @@
 ﻿using iwant_backend.Domain.Products;
 using iwant_backend.Infra.Data;
+using Microsoft.AspNetCore.Authorization;
+using System.Security.Claims;
 
 namespace iwant_backend.Endpoints.Categories;
 
@@ -10,10 +12,12 @@ public class CategoryPost
 
     public static Delegate Handle => Action;
 
-    public static IResult Action(CategoryRequest categoryRequest, ApplicationDbContext context)
-    {
 
-        var category = new Category(categoryRequest.Name, "Test", "Test");
+    [Authorize(Policy = "EmployeePolicy")]
+    public static IResult Action(CategoryRequest categoryRequest, HttpContext http, ApplicationDbContext context)
+    {
+        var userId = http.User.Claims.First(c => c.Type == ClaimTypes.NameIdentifier).Value;
+        var category = new Category(categoryRequest.Name, userId, userId);
 
 
         if (!category.IsValid)

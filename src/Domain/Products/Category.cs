@@ -13,8 +13,8 @@ public class Category : Entity
         Name = name;
         Active = true;
         CreatedBy = createdBy;
-        CreatedOn = DateTime.Now;
         EditedBy = editedBy;
+        CreatedOn = DateTime.Now;
         EditedOn = DateTime.Now;
 
         Validate();
@@ -31,10 +31,12 @@ public class Category : Entity
         AddNotifications(contract);
     }
 
-    public void EditInfo(string name, bool active)
+    public void EditInfo(string name, bool active, string editedBy)
     {
         Active = active;
         Name = name;
+        EditedBy = editedBy;
+        EditedOn = DateTime.Now;
 
         Validate();
     }
