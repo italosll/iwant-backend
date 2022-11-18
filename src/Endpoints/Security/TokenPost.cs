@@ -49,7 +49,7 @@ public class TokenPost
 
             Audience = configuration["JwtBearerTokenSettings:Audience"],
             Issuer = configuration["JwtBearerTokenSettings:Issuer"],
-            Expires = DateTime.UtcNow.AddSeconds(10)
+            Expires = DateTime.UtcNow.AddHours(1)
 
         };
 
