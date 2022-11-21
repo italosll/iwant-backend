@@ -17,7 +17,7 @@ public class EmployeeGetAll
         }
 
         var result = await query.Execute(page.Value, rows.Value);
-        return Results.Ok();
+        return Results.Ok(result);
     }
 
 
