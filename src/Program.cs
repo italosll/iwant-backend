@@ -1,6 +1,23 @@
 using Microsoft.AspNetCore.Diagnostics;
+using Serilog;
+using Serilog.Sinks.MSSqlServer;
 
 var builder = WebApplication.CreateBuilder(args);
+
+#pragma warning disable CS0618 // O tipo ou membro é obsoleto
+builder.WebHost.UseSerilog((context, configuration) =>
+{
+    configuration
+        .WriteTo.Console()
+        .WriteTo.MSSqlServer(
+            context.Configuration["ConnectionString:IwantDb"],
+            sinkOptions: new MSSqlServerSinkOptions()
+            {
+                AutoCreateSqlTable = true,
+                TableName = "LogAPI"
+            });
+});
+#pragma warning restore CS0618 // O tipo ou membro é obsoleto
 
 builder.Services.AddSqlServer<ApplicationDbContext>(builder.Configuration["ConnectionString:IWantDb"]);
 
