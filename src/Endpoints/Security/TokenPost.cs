@@ -12,7 +12,8 @@ public class TokenPost
         LoginRequest loginRequest,
         IConfiguration configuration,
         UserManager<IdentityUser> userManager,
-        ILogger<TokenPost> log
+        ILogger<TokenPost> log,
+        IWebHostEnvironment enviroment
         )
     {
         log.LogInformation("Getting token");
@@ -48,7 +49,7 @@ public class TokenPost
 
             Audience = configuration["JwtBearerTokenSettings:Audience"],
             Issuer = configuration["JwtBearerTokenSettings:Issuer"],
-            Expires = DateTime.UtcNow.AddHours(1)
+            Expires = enviroment.IsDevelopment() || enviroment.IsStaging() ? DateTime.UtcNow.AddHours(2) : DateTime.UtcNow.AddHours(1)
 
         };
 

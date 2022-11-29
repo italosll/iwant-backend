@@ -12,8 +12,8 @@ public class Category : Entity
         Active = true;
         CreatedBy = createdBy;
         EditedBy = editedBy;
-        CreatedOn = DateTime.Now;
-        EditedOn = DateTime.Now;
+        CreatedOn = DateTime.UtcNow;
+        EditedOn = DateTime.UtcNow;
 
         Validate();
 
@@ -34,7 +34,7 @@ public class Category : Entity
         Active = active;
         Name = name;
         EditedBy = editedBy;
-        EditedOn = DateTime.Now;
+        EditedOn = DateTime.UtcNow;
 
         Validate();
     }

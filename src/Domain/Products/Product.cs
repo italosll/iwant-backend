@@ -1,4 +1,6 @@
-﻿namespace iwant_backend.Domain.Products;
+﻿using iwant_backend.Domain.Orders;
+
+namespace iwant_backend.Domain.Products;
 
 public class Product : Entity
 {
@@ -10,6 +12,7 @@ public class Product : Entity
     public int Amount { get; private set; }
     public decimal Price { get; private set; }
     public bool Active { get; private set; } = true;
+    public ICollection<Order> Orders { get; private set; }
 
 
     private Product() { }
@@ -27,8 +30,8 @@ public class Product : Entity
 
         CreatedBy = createdBy;
         EditedBy = createdBy;
-        CreatedOn = DateTime.Now;
-        EditedOn = DateTime.Now;
+        CreatedOn = DateTime.UtcNow;
+        EditedOn = DateTime.UtcNow;
 
         Validate();
     }

@@ -14,7 +14,7 @@ public class QueryAllUsersWithClaimName
 
 
         var query =
-            @"SELECT Email, ClaimValue AS Name 
+            @"SELECT users.Id as Id, Email, ClaimValue AS Name
                 FROM AspNetUserClaims claims INNER JOIN AspNetUsers users 
                 ON users.Id = claims.UserId and ClaimType = 'Name'
             order by Name
