@@ -76,4 +76,8 @@
     <None Include="C:\Users\italo\projects\iwant-backend\src\.editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include=".github\" />
+  </ItemGroup>
+
 </Project>
